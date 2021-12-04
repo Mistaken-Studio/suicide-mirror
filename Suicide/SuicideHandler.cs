@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="Handler.cs" company="Mistaken">
+// <copyright file="SuicideHandler.cs" company="Mistaken">
 // Copyright (c) Mistaken. All rights reserved.
 // </copyright>
 // -----------------------------------------------------------------------
@@ -8,15 +8,14 @@ using System.Collections.Generic;
 using Exiled.API.Features;
 using Exiled.CustomItems.API.Features;
 using Mistaken.API.Diagnostics;
-using Mistaken.API.Extensions;
 
 namespace Mistaken.Suicide
 {
-    internal class Handler : Module
+    internal class SuicideHandler : Module
     {
         public static readonly HashSet<int> InSuicidalState = new HashSet<int>();
 
-        public Handler(PluginHandler p)
+        public SuicideHandler(PluginHandler p)
             : base(p)
         {
         }

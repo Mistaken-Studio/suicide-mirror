@@ -33,7 +33,7 @@ namespace Mistaken.Suicide
         {
             Instance = this;
 
-            new Handler(this);
+            new SuicideHandler(this);
 
             API.Diagnostics.Module.OnEnable(this);
 
