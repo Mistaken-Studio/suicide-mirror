@@ -59,7 +59,7 @@
     <Compile Include="Config.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SuicideCommandHandler.cs" />
-    <Compile Include="Handler.cs" />
+    <Compile Include="SuicideHandler.cs" />
     <Compile Include="Translation.cs" />
   </ItemGroup>
   <ItemGroup>

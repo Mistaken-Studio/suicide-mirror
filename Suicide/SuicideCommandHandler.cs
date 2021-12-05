@@ -26,14 +26,14 @@ namespace Mistaken.Suicide
             if (player.IsHuman)
             {
                 success = true;
-                if (!Handler.InSuicidalState.Contains(player.Id))
+                if (!SuicideHandler.InSuicidalState.Contains(player.Id))
                 {
-                    Handler.InSuicidalState.Add(player.Id);
+                    SuicideHandler.InSuicidalState.Add(player.Id);
                     return new string[] { PluginHandler.Instance.Translation.SuicideEnter };
                 }
                 else
                 {
-                    Handler.InSuicidalState.Remove(player.Id);
+                    SuicideHandler.InSuicidalState.Remove(player.Id);
                     return new string[] { PluginHandler.Instance.Translation.SuicideExit };
                 }
             }

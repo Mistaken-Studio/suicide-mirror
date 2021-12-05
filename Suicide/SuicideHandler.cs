@@ -1,5 +1,5 @@
 ﻿// -----------------------------------------------------------------------
-// <copyright file="Handler.cs" company="Mistaken">
+// <copyright file="SuicideHandler.cs" company="Mistaken">
 // Copyright (c) Mistaken. All rights reserved.
 // </copyright>
 // -----------------------------------------------------------------------
@@ -8,15 +8,14 @@ using System.Collections.Generic;
 using Exiled.API.Features;
 using Exiled.CustomItems.API.Features;
 using Mistaken.API.Diagnostics;
-using Mistaken.API.Extensions;
 
 namespace Mistaken.Suicide
 {
-    internal class Handler : Module
+    internal class SuicideHandler : Module
     {
         public static readonly HashSet<int> InSuicidalState = new HashSet<int>();
 
-        public Handler(PluginHandler p)
+        public SuicideHandler(PluginHandler p)
             : base(p)
         {
         }
@@ -25,16 +24,16 @@ namespace Mistaken.Suicide
 
         public override void OnEnable()
         {
-            Exiled.Events.Handlers.Server.RestartingRound += this.Handle(() => this.Server_RestartingRound(), "RoundRestart");
-            Exiled.Events.Handlers.Player.Shooting += this.Handle<Exiled.Events.EventArgs.ShootingEventArgs>((ev) => this.Player_Shooting(ev));
-            Exiled.Events.Handlers.Player.ChangingRole += this.Handle<Exiled.Events.EventArgs.ChangingRoleEventArgs>((ev) => this.Player_ChangingRole(ev));
+            Exiled.Events.Handlers.Server.RestartingRound += this.Server_RestartingRound;
+            Exiled.Events.Handlers.Player.Shooting += this.Player_Shooting;
+            Exiled.Events.Handlers.Player.ChangingRole += this.Player_ChangingRole;
         }
 
         public override void OnDisable()
         {
-            Exiled.Events.Handlers.Server.RestartingRound -= this.Handle(() => this.Server_RestartingRound(), "RoundRestart");
-            Exiled.Events.Handlers.Player.Shooting -= this.Handle<Exiled.Events.EventArgs.ShootingEventArgs>((ev) => this.Player_Shooting(ev));
-            Exiled.Events.Handlers.Player.ChangingRole -= this.Handle<Exiled.Events.EventArgs.ChangingRoleEventArgs>((ev) => this.Player_ChangingRole(ev));
+            Exiled.Events.Handlers.Server.RestartingRound -= this.Server_RestartingRound;
+            Exiled.Events.Handlers.Player.Shooting -= this.Player_Shooting;
+            Exiled.Events.Handlers.Player.ChangingRole -= this.Player_ChangingRole;
         }
 
         internal static void KillPlayer(Player player, ItemType type = ItemType.None)
