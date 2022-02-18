@@ -42,16 +42,16 @@ namespace Mistaken.Suicide
             switch (type)
             {
                 case ItemType.GunCOM15:
-                    reason = PluginHandler.Instance.Translation.DeadMsg9x11;
+                    reason = PluginHandler.Instance.Translation.DeadMsg9x19;
                     break;
                 case ItemType.GunCOM18:
-                    reason = PluginHandler.Instance.Translation.DeadMsg9x11;
+                    reason = PluginHandler.Instance.Translation.DeadMsg9x19;
                     break;
                 case ItemType.GunCrossvec:
-                    reason = PluginHandler.Instance.Translation.DeadMsg9x11;
+                    reason = PluginHandler.Instance.Translation.DeadMsg9x19;
                     break;
                 case ItemType.GunFSP9:
-                    reason = PluginHandler.Instance.Translation.DeadMsg9x11;
+                    reason = PluginHandler.Instance.Translation.DeadMsg9x19;
                     break;
                 case ItemType.GunLogicer:
                     reason = PluginHandler.Instance.Translation.DeadMsg762x39;

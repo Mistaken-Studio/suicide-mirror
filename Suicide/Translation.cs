@@ -20,7 +20,7 @@ namespace Mistaken.Suicide
 
         public string DeadMsg762x39 { get; set; } = "Ther is hole in the head looks like 7.62x39 caliber";
 
-        public string DeadMsg9x11 { get; set; } = "Ther is hole in the head looks like 9x11 caliber";
+        public string DeadMsg9x19 { get; set; } = "Ther is hole in the head looks like 9x19 caliber";
 
         public string DeadMsg12gauge { get; set; } = "Ther is hole in the head looks like 12 gauge";
 
