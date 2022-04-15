@@ -5,7 +5,6 @@
 // -----------------------------------------------------------------------
 
 using System.ComponentModel;
-using Exiled.API.Interfaces;
 using Mistaken.Updater.Config;
 
 namespace Mistaken.Suicide
